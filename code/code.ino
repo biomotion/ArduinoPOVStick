@@ -1,8 +1,8 @@
-#define LATCH_PIN 8
-#define CLOCK_PIN 12
-#define DATA_PIN 11
+#define LATCH_PIN 12
+#define CLOCK_PIN 11
+#define DATA_PIN 8
 
-#define data 0b01010101
+#define data 0b10101010
 
 void setup() {
   // put your setup code here, to run once:
@@ -13,9 +13,11 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  digitalWrite(LATCH_PIN, LOW);
-  shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, data);
-  digitalWrite(LATCH_PIN, HIGH);
-  delay(500);
+  for(int i=0; i<8; i++){
+    digitalWrite(LATCH_PIN, LOW);
+    shiftOut(DATA_PIN, CLOCK_PIN, LSBFIRST, (data>>i)|(data<<(8-i)));
+    digitalWrite(LATCH_PIN, HIGH);
+    delay(500);
+  }
 
 }
