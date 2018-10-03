@@ -4,21 +4,23 @@
 #define NUM_OF_ROWS 24
 
 byte table[24][3] = { 0 };
+const byte WAITING=0, RECIEVING=1, DISPLAYING=2;
 
 void setup() {
-  // put your setup code here, to run once:
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
   pinMode(DATA_PIN, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  for(int i=0; i<8; i++){
-    digitalWrite(LATCH_PIN, LOW);
-//    shiftOut(DATA_PIN, CLOCK_PIN, LSBFIRST, (data>>i)|(data<<(8-i)));
-    digitalWrite(LATCH_PIN, HIGH);
-    delay(500);
+
+
+}
+
+void displayTable(int delayTime=2){
+  for(byte i=0; i<NUM_OF_ROWS; i++){
+    showOneRow(table[i]);
+    delay(delayTime);
   }
 }
 
