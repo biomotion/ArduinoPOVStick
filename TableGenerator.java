@@ -50,8 +50,8 @@ class ControlPanel extends JPanel implements ActionListener{
         g.fillRect(0, 0, image.getWidth(), image.getHeight());
         g.setColor(Color.WHITE);
         g.setFont(new Font("Arial", 0, 24));
-        //g.fillRect(0, 0, image.getWidth()/2, image.getHeight()/2);
-        g.drawString("5", 20, 20);
+
+        g.drawString(resultArea.getText(), 20, 20);
         this.getGraphics().drawImage(image, 0, 0, Color.BLACK, null);
     }
     
