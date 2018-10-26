@@ -34,7 +34,7 @@ void setup() {
 void loop() {
   for(byte i=0; i<NUM_OF_ROWS; i++){
     showOneRow(table[i]);
-    delay(10);
+    delay(100);
   }
 
 }
