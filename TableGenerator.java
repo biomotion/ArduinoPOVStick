@@ -10,7 +10,7 @@ public class TableGenerator{
     public static void main(String[] args){
         JFrame win = new JFrame("ECE POV Table Code Generator");
 
-        JPanel newPanel = new ControlPanel();
+        JPanel newPanel = new ControlPanel(win);
         win.add(newPanel);
         win.setSize(720, 600);
         win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -20,6 +20,7 @@ public class TableGenerator{
 }
 
 class ControlPanel extends JPanel implements ActionListener{
+    JFrame mainWin;
     JLabel promptLabel = new JLabel("Enter the text:");
     JTextField inputText = new JTextField("", 20);
     JButton genButton = new JButton("Generate");
@@ -27,7 +28,8 @@ class ControlPanel extends JPanel implements ActionListener{
     JTextArea resultArea = new JTextArea();
     JScrollPane resultPane = new JScrollPane(resultArea);
     JPanel testPanel = new JPanel();
-    ControlPanel(){
+    ControlPanel(JFrame win){
+        mainWin = win;
         resultArea.setEditable(false);
         genButton.addActionListener(this);
         
@@ -45,14 +47,17 @@ class ControlPanel extends JPanel implements ActionListener{
     public void actionPerformed(ActionEvent e){
         // BufferedImage image = new BufferedImage(inputText.getText().length()*24, 24, BufferedImage.TYPE_INT_ARGB);
         BufferedImage image = new BufferedImage(96, 96, BufferedImage.TYPE_INT_ARGB);
+
         Graphics2D g = (Graphics2D)image.getGraphics();
         g.setColor(Color.BLACK);
         g.fillRect(0, 0, image.getWidth(), image.getHeight());
         g.setColor(Color.WHITE);
         g.setFont(new Font("Arial", 0, 24));
-
-        g.drawString(resultArea.getText(), 20, 20);
-        this.getGraphics().drawImage(image, 0, 0, Color.BLACK, null);
+        // Point p = SwingUtilities.convertPoint(mainWin, 0, 0, image);
+        g.drawString(inputText.getText(), 0, 15);
+        
+        testPanel.getGraphics().drawImage(image, 0, 0, this);
     }
+
     
 }
