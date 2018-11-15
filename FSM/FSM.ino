@@ -11,6 +11,7 @@
 #define BUTTON_PIN 9
 #define NUM_OF_ROWS 24
 #define NUM_OF_REGS 2
+#define MAX_TABLE_NUM 10
 const byte ascii2hex[103] = { 0,0,0,0,0,0,0,0,0,0,
                               0,0,0,0,0,0,0,0,0,0,
                               0,0,0,0,0,0,0,0,0,0,
@@ -25,8 +26,7 @@ const byte ascii2hex[103] = { 0,0,0,0,0,0,0,0,0,0,
 SoftwareSerial BTserial(4, 7); // RX | TX
 const uint16_t baudRate = 38400;
 void displayTable(int delayTime=2);
-byte table[NUM_OF_ROWS][NUM_OF_REGS] = { 0 };
-char c=' ';
+byte table[MAX_TABLE_NUM][NUM_OF_ROWS][NUM_OF_REGS] = { 0 };
 void setup() {
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
@@ -38,7 +38,6 @@ void setup() {
 }
 
 void loop() {
-    displayTable();
     // Read from the Bluetooth module and send to the Arduino Serial Monitor
     if (BTserial.available())
     {
@@ -63,9 +62,9 @@ byte readByte(){
   return result;
 }
 
-void displayTable(int delayTime=2){
+void displayTable(byte tb[][],int delayTime=2){
   for(byte i=0; i<NUM_OF_ROWS; i++){
-    showOneRow(table[i]);
+    showOneRow(tb[i]);
     delay(delayTime);
   }
 }
