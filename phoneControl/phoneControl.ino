@@ -1,22 +1,35 @@
 //  Pins
 //  Arduino 5V out TO BT VCC
 //  Arduino GND to BT GND
-//  Arduino D9 to BT RX through a voltage divider
-//  Arduino D10 BT TX (no need voltage divider)
+//  Arduino D7 to BT RX through a voltage divider
+//  Arduino D4 BT TX (no need voltage divider)
 #include <SoftwareSerial.h>
 #define LATCH_PIN 12
 #define CLOCK_PIN 11
 #define DATA_PIN 8
+#define INT_PIN 2
+#define BUTTON_PIN 9
 #define NUM_OF_ROWS 24
 #define NUM_OF_REGS 2
-
-SoftwareSerial BTserial(10, 9); // RX | TX
+const byte ascii2hex[103] = { 0,0,0,0,0,0,0,0,0,0,
+                              0,0,0,0,0,0,0,0,0,0,
+                              0,0,0,0,0,0,0,0,0,0,
+                              0,0,0,0,0,0,0,0,0,0,
+                              0,0,0,0,0,0,0,0,0,1,
+                              2,3,4,5,6,7,8,9,0,0,
+                              0,0,0,0,0,10,11,12,13,14,
+                              15,0,0,0,0,0,0,0,0,0,
+                              0,0,0,0,0,0,0,0,0,0,
+                              0,0,0,0,0,0,0,10,11,12,
+                              13,14,15,};
+SoftwareSerial BTserial(4, 7); // RX | TX
 const uint16_t baudRate = 38400;
-
+void displayTable(int delayTime=2);
 byte table[NUM_OF_ROWS][NUM_OF_REGS] = { 0 };
 
 const byte WAITING=0, RECIEVING=1, DISPLAYING=2;
-
+char c=' ';
+boolean NL = true;
 void setup() {
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
@@ -28,26 +41,29 @@ void setup() {
 }
 
 void loop() {
-
+    displayTable();
     // Read from the Bluetooth module and send to the Arduino Serial Monitor
     if (BTserial.available())
     {
-        c = BTserial.read();
-        Serial.write(c);
+        for(uint8_t i=0; i<NUM_OF_ROWS; i++){
+          for(uint8_t j=0; j<NUM_OF_REGS; j++){
+            while(BTserial.available()<2){}
+            table[i][j] = readByte();
+          }
+        }
     }
  
- 
-    // Read from the Serial Monitor and send to the Bluetooth module
-    if (Serial.available())
-    {
-        c = Serial.read();
-        BTserial.write(c);   
- 
-        // Echo the user input to the main window. The ">" character indicates the user entered text.
-        if (NL) { Serial.print(">");  NL = false; }
-        Serial.write(c);
-        if (c==10) { NL = true; }
-    }
+}
+
+byte readByte(){
+  
+  byte result;
+  while(!BTserial.available()){}
+  result = ascii2hex[BTserial.read()];
+  result << 4;
+  while(!BTserial.available()){}
+  result += ascii2hex[BTserial.read()];
+  return result;
 }
 
 void displayTable(int delayTime=2){
