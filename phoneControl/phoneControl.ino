@@ -9,6 +9,8 @@
 #define DATA_PIN 8
 #define INT_PIN 2
 #define BUTTON_PIN 9
+#define RX 4 // to BT TX (no need voltage divider)
+#define TX 7 // to BT RX through a voltage divider
 #define NUM_OF_ROWS 24
 #define NUM_OF_REGS 2
 const byte ascii2hex[103] = { 0,0,0,0,0,0,0,0,0,0,
