@@ -26,10 +26,7 @@ SoftwareSerial BTserial(4, 7); // RX | TX
 const uint16_t baudRate = 38400;
 void displayTable(int delayTime=2);
 byte table[NUM_OF_ROWS][NUM_OF_REGS] = { 0 };
-
-const byte WAITING=0, RECIEVING=1, DISPLAYING=2;
 char c=' ';
-boolean NL = true;
 void setup() {
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
