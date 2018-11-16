@@ -1,16 +1,13 @@
-//  Pins
-//  Arduino 5V out TO BT VCC
-//  Arduino GND to BT GND
-//  Arduino D7 to BT RX through a voltage divider
-//  Arduino D4 BT TX (no need voltage divider)
 #include <SoftwareSerial.h>
-#define LATCH_PIN 12
-#define CLOCK_PIN 11
-#define DATA_PIN 8
 #define INT_PIN 2
 #define BUTTON_PIN 9
-#define RX 4 // to BT TX (no need voltage divider)
-#define TX 7 // to BT RX through a voltage divider
+//BT Pins
+#define RX 4  // to BT TX (no need voltage divider)
+#define TX 7  // to BT RX through a voltage divider
+//74HC595
+#define LATCH_PIN 12  // to pin 12
+#define CLOCK_PIN 11  // to pin 11
+#define DATA_PIN 8    // to pin 8
 #define NUM_OF_ROWS 24
 #define NUM_OF_REGS 2
 const byte ascii2hex[103] = { 0,0,0,0,0,0,0,0,0,0,
@@ -24,11 +21,10 @@ const byte ascii2hex[103] = { 0,0,0,0,0,0,0,0,0,0,
                               0,0,0,0,0,0,0,0,0,0,
                               0,0,0,0,0,0,0,10,11,12,
                               13,14,15,};
-SoftwareSerial BTserial(4, 7); // RX | TX
+SoftwareSerial BTserial(RX, TX);
 const uint16_t baudRate = 38400;
 void displayTable(int delayTime=2);
 byte table[NUM_OF_ROWS][NUM_OF_REGS] = { 0 };
-char c=' ';
 void setup() {
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
