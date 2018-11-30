@@ -6,22 +6,26 @@
 
 byte table[NUM_OF_ROWS][NUM_OF_REGS]=
 {
-  {0B10000000,0B10000000},
-  {0B01000000,0B01000000},
-  {0B00100000,0B00100000},
-  {0B00010000,0B00010000},
-  {0B00001000,0B00001000},
-  {0B00000100,0B00000100},
-  {0B00000010,0B00000010},
-  {0B00000001,0B00000001},
-  {0B10000000,0B10000000},
-  {0B01000000,0B01000000},
-  {0B00100000,0B00100000},
-  {0B00010000,0B00010000},
-  {0B00001000,0B00001000},
-  {0B00000100,0B00000100},
-  {0B00000010,0B00000010},
-  {0B00000001,0B00000001}
+{0b00000000, 0b00000000},
+{0b00000000, 0b00000000},
+{0b00000000, 0b00011000},
+{0b00000000, 0b01100000},
+{0b00000001, 0b10100000},
+{0b00000110, 0b00100000},
+{0b00000001, 0b10100000},
+{0b00000000, 0b01100000},
+{0b00000000, 0b00011000},
+{0b00000000, 0b00000000},
+{0b00000111, 0b11111000},
+{0b00000100, 0b10001000},
+{0b00000100, 0b10001000},
+{0b00000011, 0b10001000},
+{0b00000000, 0b01110000},
+{0b00000000, 0b00000000}
+
+
+
+
 };
 
 void setup() {
@@ -29,16 +33,29 @@ void setup() {
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
   pinMode(DATA_PIN, OUTPUT);
+  attachInterrupt(digitalPinToInterrupt(2), showAll, RISING);
+      digitalWrite(LATCH_PIN, LOW);
+  for(byte i=0; i<NUM_OF_REGS; i++){
+    shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, 0);
+  }
+  digitalWrite(LATCH_PIN, HIGH);
 }
 
 void loop() {
-  for(byte i=0; i<NUM_OF_ROWS; i++){
-    showOneRow(table[i]);
-    delay(100);
-  }
+
 
 }
-
+void showAll(){
+    for(byte i=0; i<NUM_OF_ROWS; i++){
+    showOneRow(table[i]);
+    delay(7);
+  }
+    digitalWrite(LATCH_PIN, LOW);
+  for(byte i=0; i<NUM_OF_REGS; i++){
+    shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, 0);
+  }
+  digitalWrite(LATCH_PIN, HIGH);
+}
 void showOneRow(byte data[3]){
   digitalWrite(LATCH_PIN, LOW);
   for(byte i=0; i<NUM_OF_REGS; i++){

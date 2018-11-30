@@ -18,8 +18,11 @@ namespace POVStick
     /// <summary>
     /// MainWindow.xaml 的互動邏輯
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
+    
         public MainWindow()
         {
             InitializeComponent();
@@ -28,6 +31,11 @@ namespace POVStick
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            frame.Create
         }
     }
 }
