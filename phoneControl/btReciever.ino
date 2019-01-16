@@ -22,7 +22,7 @@ byte readByte(){
   }else return 0;
 }
 
-String readAll(){
+String readString(){
   const uint16_t bufferLen = 1000;
   char buffer[bufferLen] = {0};
   if(!BTserial.available()) return;

@@ -32,7 +32,7 @@ void loop() {
     {
        delay(50);
        //Serial.println((uint8_t)readByte());
-       Serial.println(readAll().toInt());
+       Serial.println(readString().toInt());
     }
  
 }
