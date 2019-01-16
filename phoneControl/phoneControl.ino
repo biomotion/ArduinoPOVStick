@@ -9,12 +9,13 @@
 #define CLOCK_PIN 11  // to pin 11
 #define DATA_PIN 8    // to pin 8
 #define NUM_OF_ROWS 24
-#define NUM_OF_REGS 2
+#define NUM_OF_TABLES 10
 
 SoftwareSerial BTserial(RX, TX);
 const uint16_t baudRate = 9600;
 void displayTable(int delayTime=2);
-byte showingTable[NUM_OF_ROWS][NUM_OF_REGS] = { 0 };
+uint16_t* showingTable;
+uint16_t tables[NUM_OF_TABLES][NUM_OF_ROWS] = { 0 };
 void setup() {
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
@@ -23,17 +24,28 @@ void setup() {
   BTserial.begin(baudRate);
   Serial.print("BTserial started at "); Serial.println(baudRate);
   Serial.println(" ");
+  digitalWrite(LATCH_PIN, LOW);
+  for(byte i=0; i<2; i++){
+    shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, 0);
+  }
+  digitalWrite(LATCH_PIN, HIGH);
+  showingTable = tables[0];
 }
 
 void loop() {
     //displayTable();
     // Read from the Bluetooth module and send to the Arduino Serial Monitor
     if (BTserial.available())
-    {
-       delay(50);
-       //Serial.println((uint8_t)readByte());
-       Serial.println(readString().toInt());
+    { 
+      String message = readString();
+      delay(500);
+      Serial.println(message.indexOf('{'));
+      Serial.println(message.substring(message.indexOf('{')+1));
+      readMessage(message.substring(message.indexOf('{')+1));
+      //Serial.println((uint8_t)readByte());
+      Serial.println();
     }
+    displayTable();
  
 }
 
@@ -45,11 +57,10 @@ void displayTable(int delayTime=2){
   }
 }
 
-void showOneRow(byte data[]){
+void showOneRow(uint16_t data){
   digitalWrite(LATCH_PIN, LOW);
-  for(byte i=0; i<3; i++){
-    shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, data[i]);
-  }
+  shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, highByte(data));
+  shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, lowByte(data));
   digitalWrite(LATCH_PIN, HIGH);
 }
 
