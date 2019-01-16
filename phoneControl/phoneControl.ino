@@ -39,13 +39,14 @@ void loop() {
     { 
       String message = readString();
       delay(500);
-      Serial.println(message.indexOf('{'));
       Serial.println(message.substring(message.indexOf('{')+1));
-      readMessage(message.substring(message.indexOf('{')+1));
-      //Serial.println((uint8_t)readByte());
+      if(message.charAt(3) == '0')
+        readMessage(message.substring(message.indexOf('{')+1), 0);
+      else
+        readMessage(message.substring(message.indexOf('{')+1), 8);
       Serial.println();
     }
-    displayTable();
+    displayTable(100);
  
 }
 
