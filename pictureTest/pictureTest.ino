@@ -2,26 +2,25 @@
 #define CLOCK_PIN 11
 #define DATA_PIN 8
 #define NUM_OF_ROWS 16
-#define NUM_OF_REGS 2
 
-byte table[NUM_OF_ROWS][NUM_OF_REGS]=
+uint16_t table[NUM_OF_ROWS]=
 {
-{255,255},
-{255,255},
-{255,255},
-{255,255},
-{255,255},
-{255,255},
-{255,255},
-{255,255},
-{255,255},
-{255,255},
-{255,255},
-{255,255},
-{255,255},
-{255,255},
-{255,255},
-{255,255},
+0xffff,
+0xffff,
+0xffff,
+0xffff,
+0xffff,
+0xffff,
+0xffff,
+0xffff,
+0xffff,
+0xffff,
+0xffff,
+0xffff,
+0xffff,
+0xffff,
+0xffff,
+0xffff,
 };
 
 void setup() {
@@ -31,7 +30,7 @@ void setup() {
   pinMode(DATA_PIN, OUTPUT);
   //attachInterrupt(digitalPinToInterrupt(2), showAll, RISING);
   digitalWrite(LATCH_PIN, LOW);
-  for(byte i=0; i<NUM_OF_REGS; i++){
+  for(byte i=0; i<2; i++){
     shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, 0);
   }
   digitalWrite(LATCH_PIN, HIGH);
@@ -48,11 +47,10 @@ void showAll(){
     delay(100);
   }
 }
-void showOneRow(byte data[3]){
-  digitalWrite(LATCH_PIN, LOW);
-  for(byte i=0; i<NUM_OF_REGS; i++){
-    shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, data[i]);
-  }
+void showOneRow(uint16_t data){
+  digitalWrite(LATCH_PIN, LOW);  
+  shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, highByte(data));
+  shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, lowByte(data));
   digitalWrite(LATCH_PIN, HIGH);
 }
 
