@@ -23,7 +23,7 @@ byte readByte(){
 }
 
 String readString(){
-  const uint16_t bufferLen = 100;
+  const uint16_t bufferLen = 64;
   char buffer[bufferLen] = {0};
   if(!BTserial.available()) return;
   for(uint16_t i=0; i<bufferLen; i++){
@@ -40,9 +40,9 @@ String readString(){
   return String(buffer);
 }
 
-void readMessage(String message){
+void readMessage(String message, uint8_t cursor){
   int current=0, next;
-  int i=0;
+  int i=cursor;
   while((next = message.indexOf(',', current))!=-1){
     showingTable[i++] = message.substring(current, next).toInt();
     Serial.println(message.substring(current, next).toInt());
@@ -53,6 +53,8 @@ void readMessage(String message){
     showingTable[i++] = message.substring(current, next).toInt();
     Serial.println(message.substring(current, next).toInt());
   }
+
+  
   
 }
 
