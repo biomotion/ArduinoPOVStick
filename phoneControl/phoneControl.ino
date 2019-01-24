@@ -8,14 +8,14 @@
 #define LATCH_PIN 12  // to pin 12
 #define CLOCK_PIN 11  // to pin 11
 #define DATA_PIN 8    // to pin 8
-#define NUM_OF_ROWS 24
+#define NUM_OF_ROWS 16
 #define NUM_OF_TABLES 10
 
 SoftwareSerial BTserial(RX, TX);
 const uint16_t baudRate = 9600;
 void displayTable(int delayTime=2);
 uint16_t* showingTable;
-uint16_t tables[NUM_OF_TABLES][NUM_OF_ROWS] = { 0 };
+uint16_t bufferTable[NUM_OF_TABLES][NUM_OF_ROWS] = { 0 };
 void setup() {
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
@@ -29,7 +29,7 @@ void setup() {
     shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, 0);
   }
   digitalWrite(LATCH_PIN, HIGH);
-  showingTable = tables[0];
+  showingTable = bufferTable[0];
 }
 
 void loop() {
@@ -49,19 +49,3 @@ void loop() {
     displayTable(100);
  
 }
-
-
-void displayTable(int delayTime=2){
-  for(byte i=0; i<NUM_OF_ROWS; i++){
-    showOneRow(showingTable[i]);
-    delay(delayTime);
-  }
-}
-
-void showOneRow(uint16_t data){
-  digitalWrite(LATCH_PIN, LOW);
-  shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, highByte(data));
-  shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, lowByte(data));
-  digitalWrite(LATCH_PIN, HIGH);
-}
-

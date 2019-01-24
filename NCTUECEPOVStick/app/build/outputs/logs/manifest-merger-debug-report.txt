@@ -1,0 +1,160 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:2:1-26:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\be39f5e61af4169582bce0157b82ffb5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3549a794befd60ab93deaf414d1781cc\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\8fe3331045a1a93170a7599e3318a380\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\e7d8d3f3fa2c89dc3c9311598022454e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\dbee1f341784dd2138b3957922dcdba2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\a940e9332469fd761230c594aead91fb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\3fb8cc452f1f5e8701fb86117108a8cc\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\e68aaadad9c9081c118deb2a5247ad6d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\0ae19117597a65d209ddab9dfe0579e1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\12a3b3ea354eb1a54f9447aabfb2a6c6\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a823eba1d84e1446e825e8003b28df78\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\abc9a7e41d0d3f1664ac40fed7ede084\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\b05aa409c826d6e6da760a8d7d1a8c1f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\ab82fb3ad75a739d67d0a2ebc5c10331\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\9959662391440f8d3219fb16d6234feb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\17e63fd7d0142b53a5776a83eb28f247\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\d6bbb66d5528f2fda5aef0cea0558375\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\80fca26428dd516314ff513e6bdd1913\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\c1f5a658bc92de5e1f06089da2d759ca\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\2bad9d8e73cc721438ef9cc68d2b5503\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\9e934e4fd67ef7111ae283150b1a177f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\66b2910e134d40672d53178fd2e1dd55\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\da1b642fba3f9e8676ffe0eaa28e1109\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\aa61f4b81fcddba6b61fe9e9ae15dbea\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\a53b3dca91a3ff3e76855a6340d3414f\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\c4a4e4de1bffa972a54b5c220363c978\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\561d2302eb989f3156e88fecd82fd7af\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:3:4-34
+		INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:5:4-29
+		INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:4:4-27
+		INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.BLUETOOTH
+ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:7:4-66
+	android:name
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:7:21-64
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:8:4-72
+	android:name
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:8:21-70
+application
+ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:10:4-24:18
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3549a794befd60ab93deaf414d1781cc\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3549a794befd60ab93deaf414d1781cc\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\17e63fd7d0142b53a5776a83eb28f247\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\17e63fd7d0142b53a5776a83eb28f247\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\d6bbb66d5528f2fda5aef0cea0558375\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\d6bbb66d5528f2fda5aef0cea0558375\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\17e63fd7d0142b53a5776a83eb28f247\AndroidManifest.xml:22:18-91
+	android:label
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:13:7-39
+	android:icon
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:12:7-43
+	android:allowBackup
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:11:7-33
+	android:theme
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:14:7-38
+activity#com.yiibai.bluetooth.MainActivity
+ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:15:7-23:18
+	android:label
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:17:10-42
+	android:name
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:16:10-58
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:18:10-22:26
+action#android.intent.action.MAIN
+ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:19:13-65
+	android:name
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:19:21-62
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:21:13-73
+	android:name
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml:21:23-70
+uses-sdk
+INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\be39f5e61af4169582bce0157b82ffb5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\be39f5e61af4169582bce0157b82ffb5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3549a794befd60ab93deaf414d1781cc\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\3549a794befd60ab93deaf414d1781cc\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\8fe3331045a1a93170a7599e3318a380\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\8fe3331045a1a93170a7599e3318a380\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\e7d8d3f3fa2c89dc3c9311598022454e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\e7d8d3f3fa2c89dc3c9311598022454e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\dbee1f341784dd2138b3957922dcdba2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\dbee1f341784dd2138b3957922dcdba2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\a940e9332469fd761230c594aead91fb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\a940e9332469fd761230c594aead91fb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\3fb8cc452f1f5e8701fb86117108a8cc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\3fb8cc452f1f5e8701fb86117108a8cc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\e68aaadad9c9081c118deb2a5247ad6d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\e68aaadad9c9081c118deb2a5247ad6d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\0ae19117597a65d209ddab9dfe0579e1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\0ae19117597a65d209ddab9dfe0579e1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\12a3b3ea354eb1a54f9447aabfb2a6c6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\12a3b3ea354eb1a54f9447aabfb2a6c6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a823eba1d84e1446e825e8003b28df78\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\a823eba1d84e1446e825e8003b28df78\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\abc9a7e41d0d3f1664ac40fed7ede084\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\abc9a7e41d0d3f1664ac40fed7ede084\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\b05aa409c826d6e6da760a8d7d1a8c1f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\b05aa409c826d6e6da760a8d7d1a8c1f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\ab82fb3ad75a739d67d0a2ebc5c10331\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\ab82fb3ad75a739d67d0a2ebc5c10331\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\9959662391440f8d3219fb16d6234feb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\9959662391440f8d3219fb16d6234feb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\17e63fd7d0142b53a5776a83eb28f247\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\17e63fd7d0142b53a5776a83eb28f247\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\d6bbb66d5528f2fda5aef0cea0558375\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\d6bbb66d5528f2fda5aef0cea0558375\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\80fca26428dd516314ff513e6bdd1913\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\80fca26428dd516314ff513e6bdd1913\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\c1f5a658bc92de5e1f06089da2d759ca\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\c1f5a658bc92de5e1f06089da2d759ca\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\2bad9d8e73cc721438ef9cc68d2b5503\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\2bad9d8e73cc721438ef9cc68d2b5503\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\9e934e4fd67ef7111ae283150b1a177f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\9e934e4fd67ef7111ae283150b1a177f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\66b2910e134d40672d53178fd2e1dd55\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\66b2910e134d40672d53178fd2e1dd55\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\da1b642fba3f9e8676ffe0eaa28e1109\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\da1b642fba3f9e8676ffe0eaa28e1109\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\aa61f4b81fcddba6b61fe9e9ae15dbea\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\aa61f4b81fcddba6b61fe9e9ae15dbea\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\a53b3dca91a3ff3e76855a6340d3414f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\a53b3dca91a3ff3e76855a6340d3414f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\c4a4e4de1bffa972a54b5c220363c978\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\c4a4e4de1bffa972a54b5c220363c978\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\561d2302eb989f3156e88fecd82fd7af\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\benso\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\561d2302eb989f3156e88fecd82fd7af\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\benso\Documents\GitHub\ArduinoPOVStick\NCTUECEPOVStick\app\src\main\AndroidManifest.xml
