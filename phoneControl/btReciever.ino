@@ -25,7 +25,7 @@ byte readByte(){
 String readString(){
   const uint16_t bufferLen = 64;
   char buffer[bufferLen] = {0};
-  if(!BTserial.available()) return;
+  if(!BTserial.available()) return String();
   for(uint16_t i=0; i<bufferLen; i++){
     buffer[i] = BTserial.read();
     if(!BTserial.available()){
@@ -57,4 +57,3 @@ void readMessage(String message, uint8_t cursor){
   
   
 }
-

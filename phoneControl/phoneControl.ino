@@ -13,7 +13,6 @@
 
 SoftwareSerial BTserial(RX, TX);
 const uint16_t baudRate = 9600;
-void displayTable(int delayTime=2);
 uint16_t* showingTable;
 uint16_t bufferTable[NUM_OF_TABLES][NUM_OF_ROWS] = { 0 };
 void setup() {
