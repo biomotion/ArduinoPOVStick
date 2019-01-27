@@ -23,7 +23,7 @@ namespace TableGenerator
             Bitmap bm = new Bitmap(16, 16);
             Graphics g2 = Graphics.FromImage(bm);
             Graphics g = Graphics.FromImage(previewPicture.Image);
-            String resultString = "{\r\n";
+            String resultString = "{//" + inputText.Text + "\r\n";
             int shift = previewPicture.Height / 16;
 
             g.FillRectangle(Brushes.Black, new Rectangle(0, 0, previewPicture.Width, previewPicture.Height));
@@ -56,7 +56,7 @@ namespace TableGenerator
                 resultString += ",\r\n";
 
             }
-            resultString += "},";
+            resultString += "},\r\n";
             resultBox.Text = resultString;
             resultBox.Enabled = true;
         }

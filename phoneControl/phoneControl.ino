@@ -38,6 +38,6 @@ void loop() {
 }
 
 void int_ISR(){
-  showConstTable(showingTable);
+  showConstTable(showingTable, 20);
 }
 
