@@ -38,6 +38,8 @@ void loop() {
 }
 
 void int_ISR(){
+  delayMicroseconds(10000);
   showConstTable(showingTable, 20);
+  showOneRow(0);
 }
 

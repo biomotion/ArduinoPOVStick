@@ -8,7 +8,7 @@
 #define CLOCK_PIN 11  // to pin 11
 #define DATA_PIN 8    // to pin 8
 #define NUM_OF_ROWS 16
-#define NUM_OF_TABLES 60
+#define NUM_OF_TABLES 36
 const PROGMEM uint16_t tables[NUM_OF_TABLES][NUM_OF_ROWS] = {
 {//0
 0b0000000000000000,
@@ -682,7 +682,7 @@ void showOneRow(uint16_t data);
 void showConstTable(const uint16_t* table, int delayTime){
   for(byte i=0; i<NUM_OF_ROWS; i++){
     showOneRow(pgm_read_word_near(table + i));
-    delayMicroseconds(3500);
+    delayMicroseconds(5000);
   }
 }
 
