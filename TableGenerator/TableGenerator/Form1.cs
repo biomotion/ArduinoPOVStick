@@ -25,8 +25,10 @@ namespace TableGenerator
             Graphics g = Graphics.FromImage(previewPicture.Image);
             String resultString = "{\r\n";
             int shift = previewPicture.Height / 16;
+
             g.FillRectangle(Brushes.Black, new Rectangle(0, 0, previewPicture.Width, previewPicture.Height));
             g.DrawString(inputText.Text, new Font("Calibri", 50), Brushes.White, new PointF(0,-10));
+            
             g2.FillRectangle(Brushes.Black, new Rectangle(0, 0, 16, 16));
             g2.DrawString(inputText.Text, new Font("Calibri", 14), Brushes.White, new PointF(0, -4));
 
@@ -36,7 +38,7 @@ namespace TableGenerator
             {
 
                 resultString += "0b";
-                for (int j = 0; j < 8; j++)
+                for (int j = 15; j >= 8; j--)
                 {
                     Console.WriteLine("pt" + i * shift + ", " + j * shift + " = \t" + bm.GetPixel(i, j));
                     if (!bm.GetPixel(i, j).Equals(Color.FromArgb(255, 0, 0, 0)))
@@ -45,7 +47,7 @@ namespace TableGenerator
                         resultString += "0";
                 }
                 
-                for (int j = 8; j < 16; j++) { 
+                for (int j = 7; j >= 0; j--) { 
                     if (!bm.GetPixel(i, j).Equals(Color.FromArgb(255, 0, 0, 0)))
                         resultString += "1";
                  else

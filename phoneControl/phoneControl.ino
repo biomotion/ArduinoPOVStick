@@ -5,7 +5,6 @@
 SoftwareSerial BTserial(RX, TX);
 const uint16_t baudRate = 9600;
 
-uint16_t bufferTable[NUM_OF_TABLES][NUM_OF_ROWS] = { 0 };
 void setup() {
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
@@ -19,30 +18,26 @@ void setup() {
     shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, 0);
   }
   digitalWrite(LATCH_PIN, HIGH);
-  showingTable = bufferTable[0];
+  showingTable = tables[0];
+  attachInterrupt(digitalPinToInterrupt(2), int_ISR, RISING);
 }
 
 void loop() {
-    // Read from the Bluetooth module and send to the Arduino Serial Monitor
-//    if (BTserial.available())
-//    { 
-//      String message = readString();
-//      delay(500);
-//      Serial.println(message.substring(message.indexOf('{')+1));
-//      if(message.charAt(3) == '0')
-//        readMessage(message.substring(message.indexOf('{')+1), 0);
-//      else
-//        readMessage(message.substring(message.indexOf('{')+1), 8);
-//      Serial.println();
-//    }
-//    displayTable(100);
-  byte tableIndex = 255;
+
+  static byte tableIndex = 255;
   if(BTserial.available()){
-    tableIndex = charToIndex[BTserial.read()];
+    char ch = BTserial.read();
+    Serial.print(ch);
+    Serial.print(" = ");
+    Serial.println(tableIndex = charToIndex[ch]);;
   }
   if(tableIndex != 255){
-    showConstTable(tables[tableIndex]);
+    showingTable = tables[tableIndex];
   }
-
  
 }
+
+void int_ISR(){
+  showConstTable(showingTable);
+}
+
