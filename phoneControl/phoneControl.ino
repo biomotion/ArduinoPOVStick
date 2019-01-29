@@ -15,10 +15,10 @@ void setup() {
   Serial.println(" ");
   digitalWrite(LATCH_PIN, LOW);
   for(byte i=0; i<2; i++){
-    shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, 0);
+    shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, 0xff);
   }
   digitalWrite(LATCH_PIN, HIGH);
-  showingTable = tables[0];
+  showingTable = tables [0];
   attachInterrupt(digitalPinToInterrupt(2), int_ISR, RISING);
 }
 
@@ -42,4 +42,3 @@ void int_ISR(){
   showConstTable(showingTable, 20);
   showOneRow(0);
 }
-
