@@ -25,15 +25,25 @@ void setup() {
 void loop() {
 
   static byte tableIndex = 255;
+  uint8_t button_down = !digitalRead(BUTTON_PIN);
+  
   if(BTserial.available()){
     char ch = BTserial.read();
     Serial.print(ch);
     Serial.print(" = ");
-    Serial.println(tableIndex = charToIndex[ch]);;
+    Serial.println(tableIndex = charToIndex[ch]);
+
   }
-  if(tableIndex != 255){
-    showingTable = tables[tableIndex];
+  if(button_down){
+    Serial.println("button down");
+    delay(100);
+    tableIndex++;
   }
+  if(tableIndex >= 255){
+    tableIndex = 0;
+  }
+  showingTable = tables[tableIndex];
+
  
 }
 
