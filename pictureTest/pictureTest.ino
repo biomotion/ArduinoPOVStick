@@ -1,8 +1,10 @@
+//pin and data defination
 #define LATCH_PIN 12
 #define CLOCK_PIN 11
 #define DATA_PIN 8
 #define NUM_OF_ROWS 16
 
+//table to be showed
 uint16_t table[NUM_OF_ROWS]=
 {
 0b0000000000000001,
@@ -28,7 +30,9 @@ void setup() {
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLOCK_PIN, OUTPUT);
   pinMode(DATA_PIN, OUTPUT);
-  //attachInterrupt(digitalPinToInterrupt(2), showAll, RISING);
+  attachInterrupt(digitalPinToInterrupt(2), showAll, RISING);
+
+  //clear the leds
   digitalWrite(LATCH_PIN, LOW);
   for(byte i=0; i<2; i++){
     shiftOut(DATA_PIN, CLOCK_PIN, MSBFIRST, 0);
@@ -37,14 +41,14 @@ void setup() {
 }
 
 void loop() {
-  showAll();
-
-  Serial.println("showing");
 }
+
+//showing when the stick is shaked
 void showAll(){
+    Serial.println("showing");
     for(byte i=0; i<NUM_OF_ROWS; i++){
     showOneRow(table[i]);
-    delay(100);
+    delayMicroseconds(10000);
   }
 }
 void showOneRow(uint16_t data){
